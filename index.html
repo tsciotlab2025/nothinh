@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ProShop – Modern E-commerce</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">ProShop</div>
+      <nav class="nav-links">
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+      </nav>
+      <button id="openCartBtn" class="cart-btn">🛒 <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Upgrade your shopping experience</h1>
+        <p>Beautiful & modern UI for your small e-commerce shop.</p>
+        <a href="#products" class="btn-primary">Shop Now</a>
+      </div>
+      <img src="https://placehold.co/500x350?text=Hero+Banner" alt="hero banner">
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="container">
+    <h2 class="section-title">Featured Products</h2>
+    <div class="grid" id="productGrid"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <p>This is a demo shop. Checkout simulates order placement; no real payment.</p>
+    </div>
+  </section>
+
+  <!-- Cart Drawer -->
+  <div id="cartDrawer" class="cart-drawer hidden">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="closeCartBtn" class="close-btn">✖</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="subtotal">Subtotal: $<span id="subtotal">0.00</span></div>
+      <button id="checkoutBtn" class="btn-primary full">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div id="checkoutModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Checkout</h3>
+      <form id="checkoutForm">
+        <label>Full Name <input required name="name"></label>
+        <label>Email <input required type="email" name="email"></label>
+        <label>Address <textarea required name="address"></textarea></label>
+        <div class="modal-actions">
+          <button type="button" id="cancelCheckout" class="btn-secondary">Cancel</button>
+          <button type="submit" class="btn-primary">Place Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Thank you Modal -->
+  <div id="thankYou" class="modal hidden">
+    <div class="modal-content">
+      <h3>🎉 Thank You!</h3>
+      <p>Your order has been placed successfully.</p>
+      <button id="backToShop" class="btn-primary">Back to Shop</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
